@@ -318,6 +318,10 @@ function beforeloadCallBack(params, callback) {
 }
 
 function messageCallBack(params){
+    //Website call inside inAppBrowser need to postMessage:
+    //webkit.messageHandlers.cordova_iab.postMessage(JSON.stringify({
+    //  my_message: "Message sent from Website loaded inAppBrowser to App"
+    //}));
     $('#status-message').text("message received: "+params.data.my_message);
 }
 
